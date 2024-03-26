@@ -1,0 +1,9 @@
+zone "lim.hyunwoo.net" {
+    type master;
+    file "/etc/bind/zones/db.lim.hyunwoo.net";
+};
+
+zone "77.180.158.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zones/db.158.180.77";
+};

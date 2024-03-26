@@ -1,0 +1,10 @@
+$TTL    604800
+@       IN      SOA     lim.hyunwoo.net. admin.lim.hyunwoo.net. (
+                              3         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+@       IN      NS      lim.hyunwoo.net.
+@       IN      A       158.180.77.237
+www     IN      A       158.180.77.237
