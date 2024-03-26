@@ -1,12 +1,13 @@
-dns-server/
-├── docker-compose.yml
-└── bind9/
-    ├── conf/
-    │   ├── named.conf
-    │   ├── named.conf.local
-    │   ├── named.conf.options
-    │   └── zones/
-    │       ├── db.example.com
-    │       └── db.192.168.1
-    └── data/
-        └── (동적으로 생성되는 파일들, 예: 로그 파일)
+version: '3.8'
+
+services:
+  bind9:
+    image: internetsystemsconsortium/bind9:9.16
+    container_name: bind9
+    volumes:
+      - ./bind9/conf:/etc/bind
+      - ./bind9/data:/var/lib/bind
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+    restart: unless-stopped
